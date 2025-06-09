@@ -4,4 +4,8 @@
 
 local map = LazyVim.safe_keymap_set
 
+-- Delete default keymaps
+vim.keymap.del("n", "<leader>l")
+vim.keymap.del("n", "<leader>L")
+
 map("n", "gl", vim.diagnostic.open_float, { desc = "Show diagnostics." })
